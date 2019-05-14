@@ -21,16 +21,12 @@ class OpenTweetTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    //Checks if date is formatted correctly
+    func testDateFormat() {
+         let formattedDate = DateFormat.formateShort(date: "2016-09-30T10:33:00-08:00")
+         XCTAssertEqual(formattedDate, "09/30/2016")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+    
     
 }
